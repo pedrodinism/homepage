@@ -54,6 +54,14 @@ header {
 
 /* classes */
 
+.title {
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* about */
+
 .about {
   box-shadow: 5px 5px 5px #888888;
   display: flex;
@@ -65,12 +73,6 @@ header {
   height: fit-content;
 }
 
-.about-title {
-  font-size: var(--font-size-title);
-  font-weight: 700;
-  margin-bottom: 40px;
-}
-
 .about-links {
   margin-top: 40px;
   display: flex;
@@ -80,4 +82,19 @@ header {
 .about-links i {
   font-size: 36px;
   padding: 5px;
+}
+
+/* my work */
+
+.project {
+  height: 35vh;
+  width: 22vw;
+  border: 1px solid black;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 50px;
 }
