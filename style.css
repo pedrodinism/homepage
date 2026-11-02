@@ -16,7 +16,7 @@ body {
 header,
 section,
 footer {
-  padding: 5vh 5vw;
+  padding: 5vh 10vw;
 }
 
 header {
@@ -33,11 +33,16 @@ header {
 
 /* images */
 
-.photo {
+.my-details {
   position: relative;
+  background-image: url("files/avatar.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 60vh;
 }
 
-.photo .name {
+.my-details .name {
   position: absolute;
   bottom: 0;
   color: white;
@@ -47,9 +52,30 @@ header {
   width: 100%;
 }
 
-.photo img {
-  height: 60vh;
-  width: auto;
+/* background */
+
+.bg-red {
+  background-color: darkred;
+}
+
+.bg-blue {
+  background-color: lightskyblue;
+}
+
+.bg-green {
+  background-color: lightgreen;
+}
+
+.bg-pink {
+  background-color: pink;
+}
+
+.bg-orange {
+  background-color: orange;
+}
+
+.bg-turquoise {
+  background-color: turquoise;
 }
 
 /* classes */
@@ -87,12 +113,36 @@ header {
 /* my work */
 
 .project {
-  height: 35vh;
-  width: 22vw;
+  height: 45vh;
+  width: 24vw;
   border: 1px solid black;
+  display: grid;
+  grid-template: 25vh 20vh / 24vw;
 }
 
-.projects {
+.project-cover {
+  color: white;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-info {
+  border-top: 1px solid black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  font-size: var(--font-size-base);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.project-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
