@@ -17,10 +17,12 @@ header,
 section,
 footer {
   padding: 5vh 10vw;
+  box-sizing: border-box;
 }
 
 header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
   align-items: center;
   background: linear-gradient(
     170deg,
@@ -31,15 +33,24 @@ header {
   );
 }
 
+footer {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  background: #0d91a8;
+  width: 100%;
+  font-size: 50px;
+  color: white;
+}
+
 /* images */
 
 .my-details {
   position: relative;
   background-image: url("files/avatar.png");
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
-  height: 60vh;
+  width: 100%;
+  aspect-ratio: 1/1;
 }
 
 .my-details .name {
@@ -96,7 +107,6 @@ header {
   background: white;
   padding: 20px 40px;
   font-size: var(--font-size-base);
-  height: fit-content;
 }
 
 .about-links {
@@ -147,4 +157,28 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 50px;
+}
+
+/* footer */
+
+footer span {
+  margin-bottom: 20px;
+}
+
+footer .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer .photo {
+  background-image: url("files/avatar.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.contact-title {
+  font-size: 60px;
 }
