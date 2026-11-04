@@ -1,8 +1,8 @@
 /* layout */
 
 :root {
-  --font-size-title: 60px;
-  --font-size-base: 26px;
+  --font-size-title: 50px;
+  --font-size-base: 20px;
 }
 
 body {
@@ -11,6 +11,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 header,
@@ -22,7 +23,7 @@ footer {
 
 header {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: 0.7fr 1.3fr;
   align-items: center;
   background: linear-gradient(
     170deg,
@@ -31,15 +32,6 @@ header {
     white 65%,
     white 100%
   );
-}
-
-footer {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  background: #0d91a8;
-  width: 100%;
-  font-size: 50px;
-  color: white;
 }
 
 /* images */
@@ -93,11 +85,16 @@ footer {
 
 .title {
   font-size: var(--font-size-title);
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 40px;
+  font-family: "Playfair Display", cursive;
 }
 
 /* about */
+
+.title.name {
+  margin-bottom: 0;
+}
 
 .about {
   box-shadow: 5px 5px 5px #888888;
@@ -161,6 +158,19 @@ footer {
 
 /* footer */
 
+footer {
+  display: grid;
+  grid-template-columns: 1.6fr 0.4fr;
+  background: #0d91a8;
+  width: 100%;
+  font-size: 30px;
+  color: white;
+}
+
+footer div {
+  margin-bottom: 40px;
+}
+
 footer span {
   margin-bottom: 20px;
 }
@@ -168,7 +178,7 @@ footer span {
 footer .contact {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  padding: 20px;
 }
 
 footer .photo {
@@ -181,4 +191,8 @@ footer .photo {
 
 .contact-title {
   font-size: 60px;
+}
+
+.contact-icons {
+  color: black;
 }
