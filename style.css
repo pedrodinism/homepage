@@ -27,7 +27,7 @@ header {
   display: grid;
   grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(10, 1fr);
-  height: 80vh;
+  min-height: 80vh;
   background: linear-gradient(
     170deg,
     #0d91a8 0%,
@@ -46,16 +46,6 @@ header {
   background-size: cover;
   width: 100%;
   aspect-ratio: 1/1;
-}
-
-.my-details .name {
-  position: absolute;
-  bottom: 0;
-  color: white;
-  font-size: var(--font-size-title);
-  display: flex;
-  justify-content: center;
-  width: 100%;
 }
 
 /* background */
@@ -103,15 +93,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100%;
-}
-
-.name {
-  color: white;
-  font-size: var(--font-size-title);
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  min-height: 100%;
 }
 
 .name {
@@ -154,7 +136,7 @@ footer i {
 /* my work */
 
 .project {
-  height: 40vh;
+  min-height: 40vh;
   border: 1px solid black;
   display: grid;
   grid-template-rows: repeat(5, 1fr);
@@ -242,7 +224,7 @@ footer .photo {
   }
 
   .photo {
-    height: 40vh;
+    min-height: 40vh;
   }
 
   .name {
@@ -272,7 +254,7 @@ footer .photo {
 
 @media (min-width: 700px) and (max-width: 1024px) {
   header {
-    height: 85vh;
+    min-height: 85vh;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
