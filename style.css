@@ -1,8 +1,8 @@
 /* layout */
 
 :root {
-  --font-size-title: 50px;
-  --font-size-base: 20px;
+  --font-size-title: 2.5em;
+  --font-size-base: 1.2em;
 }
 
 body {
@@ -118,7 +118,7 @@ header {
   grid-column: 1 / 5;
   grid-row: 10 / 11;
   z-index: 1;
-  font-size: 4em;
+  font-size: var(--font-size-title);
   color: white;
   text-align: center;
 }
@@ -145,8 +145,9 @@ header {
   justify-content: flex-end;
 }
 
-.about-links i {
-  font-size: 36px;
+.about-links i,
+footer i {
+  font-size: var(--font-size-title);
   padding: 5px;
 }
 
@@ -154,7 +155,6 @@ header {
 
 .project {
   height: 40vh;
-  /* width: 400px; */
   border: 1px solid black;
   display: grid;
   grid-template-rows: repeat(5, 1fr);
@@ -162,7 +162,7 @@ header {
 
 .project-cover {
   color: white;
-  font-size: 40px;
+  font-size: var(--font-size-base);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -198,7 +198,7 @@ footer {
   grid-template-columns: 1fr 1fr 1fr;
   background: #0d91a8;
   width: 100%;
-  font-size: 30px;
+  font-size: var(--font-size-base);
   color: white;
 }
 
@@ -226,7 +226,7 @@ footer .photo {
 }
 
 .contact-title {
-  font-size: 60px;
+  font-size: var(--font-size-title);
 }
 
 .contact-icons {
@@ -236,27 +236,30 @@ footer .photo {
 /* new */
 
 @media (max-width: 1000px) {
+  :root {
+    --font-size-title: 2em;
+    --font-size-base: 1.3em;
+  }
+
   header {
-    grid-template-rows: repeat(20, 1fr);
-    grid-template-columns: 1fr;
-    height: 1400px;
+    display: block;
+    height: auto;
   }
 
   .photo {
-    grid-row: 1 / 12;
-    grid-column: 1 / 2;
+    height: 40vh;
   }
 
   .name {
-    grid-row: 11 / 12;
-    grid-column: 1 / 2;
-    background: rgba(0, 0, 0, 0.3);
-    font-size: 3em;
+    font-size: 2em;
+    background: rgba(0, 0, 0, 0.8);
   }
 
   .about {
-    grid-row: 12 / 22;
-    grid-column: 1 / 2;
+  }
+
+  .about .title {
+    margin-bottom: 10px;
   }
 
   .project-list {
